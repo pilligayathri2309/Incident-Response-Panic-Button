@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Incident Response Panic Button</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <div class="brand">
+          <span class="brand-mark"></span>
+          <span>IR Panic Button</span>
+        </div>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#overview">Overview</a>
+          <a href="#workflow">Workflow</a>
+          <a href="#response">Response</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <a class="nav-cta" href="#activate">Activate Now</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <div class="eyebrow">Security Operations</div>
+            <h1>Respond faster when the incident hits.</h1>
+            <p class="lead">
+              The Incident Response Panic Button gives teams an immediate, documented escalation path when cyber threats, data exposure, or operational disruption require urgent action.
+            </p>
+
+         <div class="incident-form">
+  <label for="incidentDescription">Incident Description</label>
+  <textarea
+    id="incidentDescription"
+    placeholder="Describe the incident..."
+    rows="3"
+  ></textarea>
+
+  <label for="incidentSeverityInput">Select Severity</label>
+  <select id="incidentSeverityInput">
+    <option value="Critical">Critical</option>
+    <option value="High">High</option>
+    <option value="Medium">Medium</option>
+    <option value="Low">Low</option>
+  </select>
+</div>
+
+<div class="cta-row" id="activate">
+  <button class="btn btn-primary" type="button" id="triggerButton">
+    Activate Panic Button
+  </button>
+
+  <a class="btn btn-secondary" href="#workflow">
+    View Response Flow
+  </a>
+</div>
+
+            <div class="stats">
+              <div class="stat">
+                <strong>30 sec</strong>
+                <span>Critical escalation window</span>
+              </div>
+              <div class="stat">
+                <strong>24/7</strong>
+                <span>On-call coverage</span>
+              </div>
+              <div class="stat">
+                <strong>99.9%</strong>
+                <span>Alert routing reliability</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel incident-panel" aria-live="polite">
+            <div class="status-badge" id="statusBadge">All systems stable</div>
+
+            <div class="incident-box">
+              <h3>Live Incident Snapshot</h3>
+              <div id="latestIncident" style="margin-top: 18px; padding: 14px; border-radius: 10px; background: rgba(40, 210, 190, 0.08); border: 1px solid rgba(40, 210, 190, 0.25);">
+  <h3 style="margin: 0 0 12px;">Latest Incident</h3>
+  <p>Incident ID: <strong id="incidentId">No incident yet</strong></p>
+  <p>Severity: <strong id="incidentSeverity">—</strong></p>
+  <p>Status: <strong id="incidentStatus">—</strong></p>
+  <p>Created At: <strong id="incidentCreatedAt">—</strong></p>
+</div>
+
+              <div class="incident-row"><span>Threat level</span><strong id="threatLevel">Low</strong></div>
+              <div class="incident-row"><span>Escalation channel</span><strong>Security Ops</strong></div>
+              <div class="incident-row"><span>Response lead</span><strong>On-call engineer</strong></div>
+              <div class="incident-row"><span>Containment status</span><strong id="containment">Ready</strong></div>
+            </div>
+
+            <button id="panicButton" class="panic-button" type="button">Trigger emergency response</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="overview">
+        <div class="container">
+          <div class="section-title">
+            <h2>Why teams need a panic button</h2>
+            <p>When every second matters, clarity beats chaos.</p>
+          </div>
+
+          <div class="feature-grid">
+            <div class="feature-card">
+              <div class="icon">01</div>
+              <h3>Immediate escalation</h3>
+              <p>Trigger an urgent incident path across IT, security, and leadership without waiting for manual coordination.</p>
+            </div>
+            <div class="feature-card">
+              <div class="icon">02</div>
+              <h3>Structured response</h3>
+              <p>Follow a consistent playbook that removes guesswork and speeds recovery during high-pressure events.</p>
+            </div>
+            <div class="feature-card">
+              <div class="icon">03</div>
+              <h3>Clear ownership</h3>
+              <p>Assign roles, notify responders, and track actions so no important step is missed under stress.</p>
+            </div>
+            <div class="feature-card">
+              <div class="icon">04</div>
+              <h3>Evidence capture</h3>
+              <p>Log timestamps, impact, and decisions to support forensics, compliance reviews, and post-incident learning.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="workflow">
+        <div class="container">
+          <div class="section-title">
+            <h2>Response workflow</h2>
+            <p>Built to shorten the path from detection to control.</p>
+          </div>
+
+          <div class="timeline">
+            <div class="step">
+              <div class="step-number">1</div>
+              <h3>Detect</h3>
+              <p>Monitor events and validate whether a system issue or breach requires emergency response.</p>
+            </div>
+            <div class="step">
+              <div class="step-number">2</div>
+              <h3>Notify</h3>
+              <p>Send alerts to the right responders, incident commander, and stakeholders immediately.</p>
+            </div>
+            <div class="step">
+              <div class="step-number">3</div>
+              <h3>Contain</h3>
+              <p>Isolate affected services, revoke compromised access, and stop the spread of impact.</p>
+            </div>
+            <div class="step">
+              <div class="step-number">4</div>
+              <h3>Recover</h3>
+              <p>Restore service, verify integrity, and capture lessons to improve future readiness.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<section class="section" id="liveStatistics">
+  <div class="container">
+    <div class="section-title">
+      <h2>Live Incident Statistics</h2>
+      <p>Updated from recorded AWS incidents.</p>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="icon">📋</div>
+        <h3>Total Incidents</h3>
+        <p id="totalIncidents" style="font-size: 2rem; font-weight: bold;">0</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon">🔴</div>
+        <h3>Active Incidents</h3>
+        <p id="activeIncidents" style="font-size: 2rem; font-weight: bold;">0</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon">🚨</div>
+        <h3>Critical Incidents</h3>
+        <p id="criticalIncidents" style="font-size: 2rem; font-weight: bold;">0</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="icon">✅</div>
+        <h3>Resolved Incidents</h3>
+        <p id="resolvedIncidents" style="font-size: 2rem; font-weight: bold;">0</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+      <section class="section" id="response">
+        <div class="container">
+          <div class="section-title">
+            <h2>Operational readiness</h2>
+            <p>Prepared for the moments when normal procedures are not fast enough.</p>
+          </div>
+
+          <div class="metrics">
+            <div class="metrics-grid">
+              <div class="metric-box">
+                <strong>4x</strong>
+                <span>Faster stakeholder awareness</span>
+              </div>
+              <div class="metric-box">
+                <strong>90%</strong>
+                <span>Lower coordination overhead</span>
+              </div>
+              <div class="metric-box">
+                <strong>24/7</strong>
+                <span>Continuous escalation coverage</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="container">
+          <div class="section-title">
+            <h2>Frequently asked questions</h2>
+            <p>Simple answers for teams under pressure.</p>
+          </div>
+
+          <div class="faq">
+            <div class="faq-item">
+              <h3>Who can trigger the panic button?</h3>
+              <p>Authorized responders, security leads, and designated on-call operators can activate it according to incident policy.</p>
+            </div>
+            <div class="faq-item">
+              <h3>What happens when it is activated?</h3>
+              <p>It initiates a predefined escalation sequence, notifies stakeholders, and starts incident logging and triage workflow.</p>
+            </div>
+            <div class="faq-item">
+              <h3>Can it be used for non-cyber incidents?</h3>
+              <p>Yes. It supports major outages, critical service failures, and other operational emergencies that require immediate coordination.</p>
+            </div>
+            <div class="faq-item">
+              <h3>How is this different from a normal alert?</h3>
+              <p>A panic button is a deliberate emergency escalation designed to prioritize speed, ownership, and urgent action.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-row">
+        <div>Incident Response Panic Button</div>
+        <div>Prepared for rapid, coordinated action.</div>
+      </div>
+    </footer>
+
+<script src="script.js" defer></script>
+
+
+  </body>
+</html>
